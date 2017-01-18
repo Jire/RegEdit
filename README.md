@@ -49,7 +49,7 @@ HKEY.LOCAL_MACHINE["SOFTWARE\\JavaSoft\\Java Development Kit\\1.8", "JavaHome"] 
 ## Creating keys
 
 ```java
-HKEY.LOCAL_MACHINE.create("SOFTWARE\\JavaSoft\\Java Development Kit\\1.8\\JavaHome");
+HKEY.LOCAL_MACHINE.createKey("SOFTWARE\\JavaSoft\\Java Development Kit\\1.8\\JavaHome");
 ```
 
 ## Deleting keys
