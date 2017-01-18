@@ -1,6 +1,9 @@
 # RegEdit
 _Windows Registry editing on the JVM_
 
+[![Build Status](https://travis-ci.org/Jire/RegEdit.svg?branch=master)](https://travis-ci.org/Jire/RegEdit)
+[![License](https://img.shields.io/github/license/Jire/RegEdit.svg)](https://github.com/Jire/RegEdit/blob/master/LICENSE.txt)
+
 ### Gradle
 ```groovy
 compile group: 'org.jire.regedit', name: 'regedit', version: '1.0.0'
