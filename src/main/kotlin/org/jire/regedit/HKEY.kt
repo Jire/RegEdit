@@ -88,8 +88,17 @@ enum class HKEY(val flag: Int) {
 	 * @throws IllegalStateException if the value does not exist.
 	 * You can use [valueExists] to check if it does before calling this function.
 	 */
-	@JvmName("value")
 	operator fun get(key: String, value: String): String = WinRegQueryValueEx(flag, key, value)
+	
+	/**
+	 * Sets a registry value to the specified content.
+	 *
+	 * @param key The subkey to set.
+	 * @param value The value of the subkey to set.
+	 * @param content The content to place within the specified value.
+	 */
+	operator fun set(key: String, value: String, content: String)
+			= WinRegSetValueEx(flag, key, value, content) == ERROR_SUCCESS
 	
 	/**
 	 * Returns all of the subkeys from the specified key.
@@ -142,5 +151,12 @@ enum class HKEY(val flag: Int) {
 	 * @param value The value to check from the specified key.
 	 */
 	fun valueExists(key: String, value: String) = WinRegValueExist(flag, key, value)
+	
+	/**
+	 * Creates a registry entry of the specified key.
+	 *
+	 * @param key The subkey to create.
+	 */
+	fun createKey(key: String) = WinRegCreateNoReflectionKey(flag, key) == ERROR_SUCCESS
 	
 }

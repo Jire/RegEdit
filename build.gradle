@@ -4,7 +4,7 @@ buildscript {
 	ext.project_owner_github = 'jire'
 	
 	ext.project_name = 'RegEdit'
-	ext.project_description = 'Windows Registry editing for the JVM'
+	ext.project_description = 'Windows Registry editing on the JVM'
 	ext.project_group = 'org.jire.regedit'
 	ext.project_artifact = 'regedit'
 	ext.project_version = '1.0.0'
